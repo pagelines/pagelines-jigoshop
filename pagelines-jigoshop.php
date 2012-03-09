@@ -19,6 +19,8 @@ class PageLinesJigoShop {
 	 */
 	function __construct() {
 
+		add_action( 'admin_print_styles', array( &$this, 'admin_css' ) );
+
 		if ( is_admin() )
 			return;
 			
@@ -28,6 +30,12 @@ class PageLinesJigoShop {
 		add_action( 'wp_head', array( &$this, 'jigoshop_actions' ) );
 		add_filter( 'pagelines_lesscode', array( &$this, 'jigoshop_less' ), 10, 1 );
 		add_action( 'wp_print_styles', array( &$this, 'head_css' ) );		
+	}	
+	
+	function admin_css() {
+		
+		if ( function_exists( 'ploption') )
+			wp_deregister_style( 'jquery-ui-jigoshop-styles' );
 	}
 	
 	function head_css() {
