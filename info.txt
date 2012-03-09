@@ -1,0 +1,10 @@
+== Description ==
+
+**PageLines jigoshop Integration** blah blah description
+
+**What's new?** 
+
+== Changelog ==
+
+= 1.0.0 =
+* Initial release
