@@ -21,31 +21,68 @@ class PageLinesJigoShop {
 
 		$this->base_url = sprintf( '%s/%s', WP_PLUGIN_URL,  basename( dirname( __FILE__ ) ) );
 		$this->base_dir = sprintf( '%s/%s', WP_PLUGIN_DIR,  basename( dirname( __FILE__ ) ) );
-		
-		add_action( 'admin_print_styles', array( &$this, 'admin_css' ) );
-		add_filter( 'postsmeta_settings_array', array( &$this, 'jigo_meta' ), 10, 1 );
 
 		if ( is_admin() )
-			return;
-			
-		$this->base_url = sprintf( '%s/%s', WP_PLUGIN_URL,  basename( dirname( __FILE__ ) ) );
-		$this->base_dir = sprintf( '%s/%s', WP_PLUGIN_DIR,  basename( dirname( __FILE__ ) ) );
+			$this->admin_setup();
 		
 		add_action( 'wp_head', array( &$this, 'jigoshop_actions' ) );
 		add_filter( 'pagelines_lesscode', array( &$this, 'jigoshop_less' ), 10, 1 );
 		add_action( 'wp_print_styles', array( &$this, 'head_css' ) );
 		add_action( 'template_redirect', array( &$this, 'jigo_integration' ) );	
 	}	
+
+	function admin_setup() {
+		
+		add_action( 'admin_print_styles', array( &$this, 'admin_css' ) );
+		add_action( 'admin_init', array( &$this, 'admin_page' ) );
+		add_filter( 'postsmeta_settings_array', array( &$this, 'jigo_meta' ), 10, 1 );
+		add_filter( 'pl_cpt_dragdrop', array( &$this, 'jigo_templates' ), 1, 2 );
+
+	
+	}
+
+
+	function admin_page() {
+		
+		pl_add_options_page( array( 
+			'name'	=> 'jigoshop',
+			'raw'	=> $this->instructions(),
+		 	'title'	=> 'Jigoshop Instructions.'	
+		) );	
+	}
+
+
+	function instructions() {
+		
+		return '<p>All pages are handled in their respective page meta settings except the main shop page, as this is an archive it requires a special meta page to control layout.</p>
+				<p>It is not possible to add sections to the shop or product content areas, you can however add sections to the header/morefoot/footer areas and hide them by default then enable them on the product archive special meta tab.</p>';
+		
+		
+	}
+
+	
+	/**
+	 *	Remove products from the template setup area, we cant control them so remove them.
+	 *  Individual products have meta settings, product archive is handled in special meta.
+	 */	
+	function jigo_templates( $public_post_type, $dragdrop ) {
+		
+		if ( 'product' == $public_post_type )
+			return false;
+		return true;
+	}
+	
+	
 	
 	/**
 	 *	Add integration to store page
 	 */
 	function jigo_integration() {
-			
+
 		if ( ! $this->check() )
 			return;
 		if ( is_archive() )
-			new PageLinesIntegration( 'jigoshop' );
+			new PageLinesIntegration( 'product_archive' );
 	}
 	
 	/**
@@ -57,8 +94,8 @@ class PageLinesJigoShop {
 
 		$meta = array(
 		
-		'jigoshop' => array(
-			'metapanel' => $metapanel_options->posts_metapanel( 'jigoshop', 'jigoshop' ),
+		'product_archive' => array(
+			'metapanel' => $metapanel_options->posts_metapanel( 'product_archive', 'product_archive' ),
 			'icon'		=> $this->base_url.'/icon.png'
 		) );
 			$d = array_merge($d, $meta);
