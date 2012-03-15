@@ -3,4 +3,89 @@
  *
  */
 
+/* Product Stuff */
+li.product {list-style:none;}
 
+/* Forms Reset */
+form .form-row input.input-text, #content .form-row input.input-text, form .form-row textarea, #content .form-row textarea, input#coupon_code.input-text, input.input-text.qty.text {
+	font-family: "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", sans-serif;
+	font-size: 11px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+}
+
+/* Shipping */
+a.shipping-calculator-button:hover {
+	text-decoration:none !important;
+}
+.cart-collaterals .shipping_calculator .button {
+	width: 204px!important;
+}
+
+/* Button Shift */
+td.actions .button-alt {
+	margin: 1px 0 0 6px;
+}
+
+/* Adjust quanity spacing */
+.quantity input.qty {
+	margin: 1px 4px 0 4px !important;
+}
+
+div.product #tabs ul.tabs a:hover {
+	text-decoration:underline;
+}
+
+/* Button styles */
+.button-alt,a.button, button.button, input.button{
+	margin: 2px 2px 0 0;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	padding:6px 9px !important;
+	border-radius: 4px;
+	color:#000000 !important;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	border: 1px solid #BBB;
+	background: #EEE;
+	background: -moz-linear-gradient(top,white 0%,gainsboro 100%);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,white),color-stop(100%,gainsboro));
+	background: -webkit-linear-gradient(top,white 0%,gainsboro 100%);
+	background: -o-linear-gradient(top,white 0%,gainsboro 100%);
+	background: -ms-linear-gradient(top,white 0%,gainsboro 100%);
+	background: linear-gradient(top,white 0%,gainsboro 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#d3d3d3',GradientType=0);
+	box-shadow: inset 1px 1px 0px #FFF;
+}
+
+.button-alt:hover,a.button:hover, button.button:hover, input.button:hover {
+	color:#000000!important; 
+	text-shadow:0 1px 0 rgba(255,255,255,0.5);
+	text-decoration:none !important;
+	border:1px solid #aeaeae; 
+	background:#e1e1e1; 
+	background:-moz-linear-gradient(top,#f3f3f3 0%,#cfcfcf 100%); 
+	background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#ffffff),color-stop(100%,#cfcfcf)); 
+	background:-webkit-linear-gradient(top,#f3f3f3 0%,#cfcfcf 100%); 
+	background:-o-linear-gradient(top,#f3f3f3 0%,#cfcfcf 100%); 
+	background:-ms-linear-gradient(top,#f3f3f3 0%,#cfcfcf 100%); 
+	background:linear-gradient(top,#f3f3f3 0%,#cfcfcf 100%); 
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#d3d3d3',GradientType=0); 
+}
+
+.button-alt:active,a.button:active, button.button:active, input.button:active{
+	color:#000000 !important; 
+	text-shadow:0 1px 0 rgba(255,255,255,0.5); 
+	border:1px solid #8e8e8e; 
+	background:#c1c1c1; 
+	background:-moz-linear-gradient(top,#afafaf 0%,#d3d3d3 100%); 
+	background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#ffffff),color-stop(100%,#d3d3d3)); 
+	background:-webkit-linear-gradient(top,#afafaf 0%,#d3d3d3 100%); 
+	background:-o-linear-gradient(top,#afafaf 0%,#d3d3d3 100%); 
+	background:-ms-linear-gradient(top,#afafaf 0%,#d3d3d3 100%); 
+	background:linear-gradient(top,#afafaf 0%,#d3d3d3 100%); 
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#d3d3d3',GradientType=0);
+	box-shadow: none;
+}

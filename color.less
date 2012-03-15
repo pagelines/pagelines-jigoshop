@@ -1,1 +1,72 @@
-@bbpress-contrast = darken( @pl-base, @invert-dark  );
+@light-base = lighten( @pl-base, @invert-light  );
+@dark-base = darken( @pl-base, @invert-dark  );
+
+/* Cart Buttons */
+a.button, button.button, input.button, #review_form #submit {
+	color: @pl-text !important;
+}
+
+/* Forms */
+form .form-row input.input-text, #content .form-row input.input-text, form .form-row textarea, #content .form-row textarea, input#coupon_code {
+	background-color: @dark-base;
+	color: fadeout(@pl-text, 30%);
+	border: inset 1px solid darken(@dark-base, 8); 
+}
+
+/* Shop Tables */
+table.shop_table{
+	border: 1px solid darken(@dark-base, 8); 
+}
+
+table.shop_table td {
+	border-top: 1px solid darken(@dark-base, 8); 
+}
+
+table.shop_table th,.products li strong {
+	color: lighten(@pl-text, 50);
+}
+
+/* From Green to Default PL Link */
+span.onsale {
+	background-color: @pl-link;
+}
+.products li .price,div.product p.price,.stock  {
+	color: @pl-link;
+}
+span.price:hover {
+	color: fadeout(@pl-link, 20%);
+}
+
+/* Product Atts */
+div.product #tabs ul.tabs,div.product #tabs ul.tabs a  {
+	background-color: @dark-base;
+}
+
+/* Quantity Buttons */
+.quantity input.plus, .quantity input.minus  {
+	background-color: @dark-base;
+	border: 1px solid darken(@dark-base, 8); 
+	color: @pl-text !important;
+}
+
+.quantity input.plus:hover, .quantity input.minus:hover {
+	background-color: darken(@dark-base, 8);
+	border: 1px solid darken(@dark-base, 12); 
+} 
+
+/* Product Image Border */
+.products li a img {
+	border: 1px solid darken(@dark-base, 8); 
+}
+.products li a img:hover {
+	border: 1px solid darken(@dark-base, 15); 
+}
+
+/* Payment  */
+#payment {
+	background-color: @dark-base;
+}
+
+#payment div.payment_box {
+	background-color: lighten(@dark-base,4);
+}
