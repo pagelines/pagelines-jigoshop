@@ -156,14 +156,39 @@ class PageLinesJigoShop {
 	
 	function open_jigoshop_content_wrappers() {
 	
-	    printf( '%1$s<!-- PageLines jigoshop before -->%1$s<section id="content" class="container fix"><div class="texture"><div class="content"><div class="content-pad"><div id="pagelines_content" class="fix"><div id="column-wrap" class="fix"><div id="column-main" class="mcolumn fix"><div class="mcolumn-pad"><section id="postloop" class="copy top-postloop postloop-bottom"><div class="copy-pad"><article class="page type-page hentry fpost"><div class="hentry-pad "><div class="entry_wrap fix"><div class="entry_content">%1$s<!-- PageLines jigoshop before -->%1$s', "\n" );
+		?><!-- PageLines jigoshop before -->
+			<section id="content" class="container fix">
+				<div class="texture"><div class="content">
+					<div class="content-pad">
+						<div id="pagelines_content" class="fix">
+							<div id="column-wrap" class="fix">
+								<div id="column-main" class="mcolumn fix">
+									<div class="mcolumn-pad">
+										<section id="postloop" class="copy top-postloop postloop-bottom">
+											<div class="copy-pad">
+												<article class="page type-page hentry fpost">
+													<div class="hentry-pad ">
+														<div class="entry_wrap fix">
+															<div class="entry_content">
+		<?php 
 
 		}
 	
 	function close_jigoshop_content_wrappers() {
 
-	     printf( '%1$s<!-- PageLines jigoshop before -->%1$s</div></div></div></article></div></section></div></div></div>%1$s<!-- PageLines jigoshop before -->%1$s', "\n" );
-		}
+		?>
+															</div>
+														</div>
+													</div>
+												</article>
+											</div>
+										</section>
+									</div>
+								</div>
+							</div>
+		<?php 
+
+	}
 
 	/**
 	 *	Check if we are in jigoshop and PageLines Framework.
