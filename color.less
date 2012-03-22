@@ -1,9 +1,25 @@
 @light-base = lighten( @pl-base, @invert-light  );
 @dark-base = darken( @pl-base, @invert-dark  );
 
-/* Cart Buttons */
-a.button, button.button, input.button, #review_form #submit {
-	color: @pl-text !important;
+div.product #tabs ul.tabs a, div.product #tabs ul.tabs li.active a{
+	color: @pl-text;
+}
+
+/* Tabs */ 
+div.product #tabs ul.tabs {
+	background-color: @dark-base;
+}
+div.product #tabs ul.tabs a {
+	background: lighten(@dark-base, 5);
+}
+
+#page div.product #tabs .panel {
+	border: 1px solid @dark-base;
+	border-top: 0;
+}
+
+div.product #tabs ul.tabs li.active a{
+	background: @pl-base;
 }
 
 /* Forms */
@@ -37,10 +53,6 @@ span.price:hover {
 	color: fadeout(@pl-link, 20%);
 }
 
-/* Product Atts */
-div.product #tabs ul.tabs,div.product #tabs ul.tabs a  {
-	background-color: @dark-base;
-}
 
 /* Quantity Buttons */
 .quantity input.plus, .quantity input.minus  {
@@ -54,13 +66,6 @@ div.product #tabs ul.tabs,div.product #tabs ul.tabs a  {
 	border: 1px solid darken(@dark-base, 12); 
 } 
 
-/* Product Image Border */
-.products li a img {
-	border: 1px solid darken(@dark-base, 8); 
-}
-.products li a img:hover {
-	border: 1px solid darken(@dark-base, 15); 
-}
 
 /* Payment  */
 #payment {
