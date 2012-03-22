@@ -100,7 +100,7 @@ td.actions .button-alt {
 	border: 1px solid #eee;
 }
 
-.pl-jigo a.button, .pl-jigo a.button-alt{
+#page a.button, #page a.button-alt, #page button.button, #page input.button{
 	padding: 4px 9px;
 	cursor: pointer;
 	text-decoration: none;
@@ -124,7 +124,7 @@ td.actions .button-alt {
 	box-shadow: inset 1px 1px 0px #FFF;
 } 
 
-	.pl-jigo a.button:hover, .pl-jigo a.button-alt:hover { 
+	#page a.button:hover, #page a.button-alt:hover, #page button.button:hover, #page input.button:hover { 
 		text-decoration: none;
 		color:#000000; 
 		text-shadow:0 1px 0 rgba(255,255,255,0.5); 
@@ -139,7 +139,7 @@ td.actions .button-alt {
 		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#d3d3d3',GradientType=0); 
 	} 
 
-	.pl-jigo a.button:active, .pl-jigo a.button-alt:active { 
+	#page a.button:active, #page a.button-alt:active, #page button.button:active, #page input.button:active { 
 		color:#000000; 
 		text-shadow:0 1px 0 rgba(255,255,255,0.5); 
 		border:1px solid #8e8e8e; 
