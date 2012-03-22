@@ -35,7 +35,7 @@ div.product div.images img {
 ul.products{
 	width: 100%;
 }
-ul.products li{width: 31%; margin-right: 2%}
+ul.products li{margin-right: 18px}
 ul.products li a img{
 	max-width: 100%;
 }
