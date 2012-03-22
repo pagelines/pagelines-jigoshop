@@ -117,8 +117,13 @@ class PageLinesJigoShop {
 	 */
 	function head_css() {
 			
-		if ( ! $this->check() )
+		if ( ! $this->check() ) {
+ 			wp_deregister_style( 'jigoshop_frontend_styles' );
+			wp_deregister_style( 'jqueryui_styles' );
+			wp_deregister_style( 'jigoshop_fancybox_styles' );
 			return;
+		}
+
 		
 		$style = sprintf( '%s/%s', $this->base_url, 'style.css' );
 		
