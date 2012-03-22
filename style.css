@@ -30,6 +30,24 @@ div.product div.images img {
 	border: 1px solid rgba(255,255,255, .4); 
 }
 
+/* Products Grid
+ *****************/
+ul.products{
+	width: 100%;
+}
+ul.products li{width: 31%; margin-right: 2%}
+ul.products li a img{
+	max-width: 100%;
+}
+ul.products li a:hover{
+	text-decoration: none;
+}
+ul.products li a strong{
+	margin: 13px 0 0px;
+	font-size: 1.2em;
+	font-weight: normal;
+}
+.products li .price{text-align: left; float: none; margin: 0; line-height: 1.3em}
 
 /* TABS
  *****************/ 
