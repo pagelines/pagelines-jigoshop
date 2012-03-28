@@ -3,6 +3,17 @@
  *
  */
 
+/* Responsive
+ *****************/
+@media screen and (max-width:600px) { 
+	#page .product.first {
+		clear: none;
+	}
+	#page .product.last {
+		margin-right: 18px;
+	}
+}
+
 /* Product Stuff */
 li.product {list-style:none;}
 
