@@ -90,6 +90,16 @@ td.actions .button-alt {
 #reviews #comments ol.commentlist li img{
 	margin-left: -47px;
 }
+
+/* Table
+ ***************/
+.shop_table {text-align: center;}
+.shop_table .product-name{
+	text-align: right;
+}
+
+
+
 /* Review Form 
  ***************/ 
 #review_form, #review_form #commentform label, #review_form h3#reply-title, #review_form textarea{
@@ -100,7 +110,7 @@ td.actions .button-alt {
 	border: 1px solid #eee;
 }
 
-.jigoshop #page a.button, .jigoshop #page a.button-alt,.jigoshop  #page button.button, .jigoshop #page input.button{
+.jigoshop #page a.button, .jigoshop #page a.button-alt,.jigoshop  #page button.button, .jigoshop #page input.button, .jigoshop #page input.button-alt{
 	padding: 4px 9px;
 	cursor: pointer;
 	text-decoration: none;

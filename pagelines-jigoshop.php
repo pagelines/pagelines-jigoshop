@@ -156,6 +156,19 @@ class PageLinesJigoShop {
 	    add_action( 'jigoshop_before_main_content', array( &$this, 'open_jigoshop_content_wrappers' ), 10 );
 	    add_action( 'jigoshop_after_main_content', array( &$this, 'close_jigoshop_content_wrappers' ), 10 );
 	
+		?>
+		
+		<script>
+		// Initialize Blocks
+		jQuery(window).load(function() {
+			jQuery('.products .product').equalizer();
+
+		});
+		
+		</script>
+		
+		<?php
+	
 	}
 	
 	function open_jigoshop_content_wrappers() {
