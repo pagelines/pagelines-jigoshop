@@ -1,8 +1,8 @@
 == Description ==
 
-**PageLines jigoshop Integration** blah blah description
+**PageLines jigoshop Integration**
 
-**What's new?** 
+Refines and configures the popular Jigoshop plugin for seamless integration into PageLines Framework.
 
 == Changelog ==
 

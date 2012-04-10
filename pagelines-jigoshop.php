@@ -5,7 +5,7 @@ Plugin URI: http://www.pagelines.com
 Author: PageLines
 Author URI: http://www.pagelines.com
 Demo: http://demo.pagelines.com/framework/shop
-Description: Refines and configured the popular Jigoshop plugin for seamless integration into PageLines. 
+Description: Refines and configures the popular Jigoshop plugin for seamless integration into PageLines. 
 PageLines: true
 Version: 1.0
 Edition: pro
