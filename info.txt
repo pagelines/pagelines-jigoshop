@@ -1,8 +1,15 @@
 == Description ==
 
-**PageLines jigoshop Integration**
+**eCommerce for PageLines has arrived**
 
-Refines and configures the popular Jigoshop plugin for seamless integration into PageLines Framework.
+Using Jigoshop you can sell pretty much anything on your PageLines site. Jigoshop for PageLines plugin provides a seamless integration with PageLines Framework. 
+
+**How to install JigoShop using PageLines**
+- First make sure that you have the actual Wordpress Plugin installed, go to > plugins > Add New
+- Search for JigoShop and install it http://screencast.com/t/ydTjKarM
+- Now you can go to PageLines > Store > Plugins > Get New Plugins
+- Select Jigoshop for PageLines and click on install
+- Once you have this activated you will be able to work with your PageLines Framework and Jigoshop
 
 == Changelog ==
 
