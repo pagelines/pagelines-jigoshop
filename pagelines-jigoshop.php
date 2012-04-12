@@ -117,12 +117,12 @@ class PageLinesJigoShop {
 	 */
 	function head_css() {
 
-		if ( ! $this->check() )
-			return;
- 		wp_deregister_style( 'jigoshop_frontend_styles' );
-		wp_deregister_style( 'jqueryui_styles' );
-		wp_deregister_style( 'jigoshop_fancybox_styles' );
+		if ( ! $this->check() ) {
 
+			wp_deregister_style( 'jigoshop_frontend_styles' );
+			wp_deregister_style( 'jqueryui_styles' );
+			wp_deregister_style( 'jigoshop_fancybox_styles' );
+		}
 		$style = sprintf( '%s/%s', $this->base_url, 'style.css' );		
 		wp_register_style( 'pl-jigoshop', $style );
 		wp_enqueue_style( 'pl-jigoshop' );			
