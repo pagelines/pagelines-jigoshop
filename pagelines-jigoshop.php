@@ -7,7 +7,7 @@ Author URI: http://www.pagelines.com
 Demo: http://demo.pagelines.com/framework/shop
 Description: Refines and configures the popular Jigoshop plugin for seamless integration into PageLines. 
 PageLines: true
-Version: 1.0
+Version: 1.1
 Edition: pro
 */
 
@@ -36,14 +36,14 @@ class PageLinesJigoShop {
 		add_action( 'admin_print_styles', array( &$this, 'admin_css' ) );
 		add_action( 'admin_init', array( &$this, 'admin_page' ) );
 		add_filter( 'postsmeta_settings_array', array( &$this, 'jigo_meta' ), 10, 1 );
-		add_filter( 'pl_cpt_dragdrop', array( &$this, 'jigo_templates' ), 1, 2 );
-
-	
+		add_filter( 'pl_cpt_dragdrop', array( &$this, 'jigo_templates' ), 1, 2 );	
 	}
 
 
 	function admin_page() {
 		
+		if ( ! $this->check() )
+			return;
 		pl_add_options_page( array( 
 			'name'	=> 'jigoshop',
 			'raw'	=> $this->instructions(),
@@ -116,20 +116,16 @@ class PageLinesJigoShop {
 	 *	Register our css and enqueue
 	 */
 	function head_css() {
-			
-		if ( ! $this->check() ) {
- 			wp_deregister_style( 'jigoshop_frontend_styles' );
-			wp_deregister_style( 'jqueryui_styles' );
-			wp_deregister_style( 'jigoshop_fancybox_styles' );
-			return;
-		}
 
-		
-		$style = sprintf( '%s/%s', $this->base_url, 'style.css' );
-		
+		if ( ! $this->check() )
+			return;
+ 		wp_deregister_style( 'jigoshop_frontend_styles' );
+		wp_deregister_style( 'jqueryui_styles' );
+		wp_deregister_style( 'jigoshop_fancybox_styles' );
+
+		$style = sprintf( '%s/%s', $this->base_url, 'style.css' );		
 		wp_register_style( 'pl-jigoshop', $style );
-		wp_enqueue_style( 'pl-jigoshop' );		
-	
+		wp_enqueue_style( 'pl-jigoshop' );			
 	}
 
 	/**
@@ -137,9 +133,7 @@ class PageLinesJigoShop {
 	 */	
 	function jigoshop_less( $less ) {
 		
-		
-		$less .= pl_file_get_contents( sprintf( '%s/color.less', $this->base_dir ) );
-		
+		$less .= pl_file_get_contents( sprintf( '%s/color.less', $this->base_dir ) );		
 		return $less;
 	}
 

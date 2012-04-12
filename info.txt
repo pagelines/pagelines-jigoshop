@@ -5,13 +5,19 @@
 Using Jigoshop you can sell pretty much anything on your PageLines site. Jigoshop for PageLines plugin provides a seamless integration with PageLines Framework. 
 
 **How to install JigoShop using PageLines**
-- First make sure that you have the actual Wordpress Plugin installed, go to > plugins > Add New
-- Search for JigoShop and install it http://screencast.com/t/ydTjKarM
-- Now you can go to PageLines > Store > Plugins > Get New Plugins
-- Select Jigoshop for PageLines and click on install
-- Once you have this activated you will be able to work with your PageLines Framework and Jigoshop
+
+* First make sure that you have the actual Wordpress Plugin installed, go to > plugins > Add New
+* Search for JigoShop and install it [pic](http://screencast.com/t/ydTjKarM)
+* Now you can go to PageLines > Store > Plugins > Get New Plugins
+* Select Jigoshop for PageLines and click on install
+* Once you have this activated you will be able to work with your PageLines Framework and Jigoshop
+
+Documentation for using [Jigoshop](http://jigoshop.com/) can be [found through the Jigoshop website](http://forum.jigoshop.com/kb/).
 
 == Changelog ==
 
-= 1.0.0 =
-* Initial release
+= 1.1 = 
+* Fix Description.
+* Make sure Framework is active theme.
+= 1.0 =
+* Initial release.
