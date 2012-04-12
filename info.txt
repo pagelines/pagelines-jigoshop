@@ -16,8 +16,13 @@ Documentation for using [Jigoshop](http://jigoshop.com/) can be [found through t
 
 == Changelog ==
 
+= 1.2 =
+* Fix Sidebars when in center sidebar mode.
+
 = 1.1 = 
 * Fix Description.
+
 * Make sure Framework is active theme.
 = 1.0 =
+
 * Initial release.

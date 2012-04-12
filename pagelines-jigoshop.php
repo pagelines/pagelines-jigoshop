@@ -7,7 +7,7 @@ Author URI: http://www.pagelines.com
 Demo: http://demo.pagelines.com/framework/shop
 Description: Refines and configures the popular Jigoshop plugin for seamless integration into PageLines. 
 PageLines: true
-Version: 1.1
+Version: 1.2
 Edition: pro
 */
 
@@ -173,7 +173,7 @@ class PageLinesJigoShop {
 				<div class="texture">
 					<div class="content">
 						<div class="content-pad">
-							<div id="pagelines_content" class="fix">
+							<div id="pagelines_content" class="fix <?php echo pl_layout_mode() ?>">
 								<div id="column-wrap" class="fix">
 									<div id="column-main" class="mcolumn fix">
 										<div class="mcolumn-pad">
@@ -198,10 +198,30 @@ class PageLinesJigoShop {
 											</section>
 										</div>
 									</div>
+								<?php echo $this->get_sidebar(); ?>
 								</div>
 		<?php 
 
 	}
+
+	function get_sidebar() {
+	
+		if ( 'two-sidebar-center' != pl_layout_mode() )
+			return '';
+		ob_start(); ?>
+<div id="sidebar1" class="scolumn fix">
+	<div class="scolumn-pad">
+		<section id="sb_primary" class="copy no_clone section-sb_primary">
+			<div class="copy-pad">
+<?php pagelines_draw_sidebar('sb_primary', 'Primary Sidebar', 'includes/widgets.default'); ?>
+			</div>
+		</section>
+	</div>
+</div>
+<?php return ob_get_clean();
+		
+	}
+
 
 	/**
 	 *	Check if we are in jigoshop and PageLines Framework.
