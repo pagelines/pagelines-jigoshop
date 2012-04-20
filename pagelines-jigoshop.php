@@ -7,7 +7,7 @@ Author URI: http://www.pagelines.com
 Demo: http://demo.pagelines.com/framework/shop
 Description: Refines and configures the popular Jigoshop plugin for seamless integration into PageLines. 
 PageLines: true
-Version: 1.2
+Version: 1.3
 Edition: pro
 */
 
