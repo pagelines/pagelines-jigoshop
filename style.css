@@ -242,7 +242,7 @@ img.attachment-shop_tiny {
 	}
 
 /* Responsive
- *****************/
+ ******************/
 @media screen and (max-width:750px) { 
 	#page .product.first {
 		clear: none;
