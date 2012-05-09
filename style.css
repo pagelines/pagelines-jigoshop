@@ -21,6 +21,9 @@ form .form-row input.input-text, #content .form-row input.input-text, form .form
 	-webkit-box-shadow: 0 1px 4px rgba(0,0,0,.4);
 	-moz-box-shadow: 0 1px 4px rgba(0,0,0,.4); 
 	box-shadow: 0 1px 4px rgba(0,0,0,.4);
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 .products li a:hover img {
 	border: 1px solid rgba(255,255,255, .6); 
