@@ -233,6 +233,15 @@ class PageLinesJigoShop {
 		return true;
 	}
 	
+	/**
+	 *	Include the LESS css file
+	 */	
+	function jigoshop_less( $less ) {
+		
+		$less .= pl_file_get_contents( sprintf( '%s/color.less', $this->base_dir ) );		
+		return $less;
+	}
+	
 } // class end
 
 
