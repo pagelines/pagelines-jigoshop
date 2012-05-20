@@ -16,6 +16,11 @@ Documentation for using [Jigoshop](http://jigoshop.com/) can be [found through t
 
 == Changelog ==
 
+= 1.4 =
+* Fixed widget styling
+* Fixed template page with custom post types
+* Misc CSS styling fixes
+
 = 1.3.5 =
 * Misc CSS Fixes
 
