@@ -119,7 +119,7 @@ class PageLinesJigoShop {
 
 		if ( ! $this->check() ) {
 
-			wp_deregister_style( 'jigoshop_frontend_styles' );
+			// wp_deregister_style( 'jigoshop_frontend_styles' );
 			wp_deregister_style( 'jqueryui_styles' );
 			wp_deregister_style( 'jigoshop_fancybox_styles' );
 		}
