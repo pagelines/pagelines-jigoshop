@@ -36,7 +36,7 @@ class PageLinesJigoShop {
 		add_action( 'admin_print_styles', array( &$this, 'admin_css' ) );
 		add_action( 'admin_init', array( &$this, 'admin_page' ) );
 		add_filter( 'postsmeta_settings_array', array( &$this, 'jigo_meta' ), 10, 1 );
-		add_filter( 'pl_cpt_dragdrop', array( &$this, 'jigo_templates' ), 1, 2 );	
+		add_filter( 'pl_cpt_dragdrop', array( &$this, 'jigo_templates' ), 11, 3 );	
 	}
 
 
@@ -55,9 +55,7 @@ class PageLinesJigoShop {
 	function instructions() {
 		
 		return '<p>All pages are handled in their respective page meta settings except the main shop page, as this is an archive it requires a special meta page to control layout.</p>
-				<p>It is not possible to add sections to the shop or product content areas, you can however add sections to the header/morefoot/footer areas and hide them by default then enable them on the product archive special meta tab.</p>';
-		
-		
+				<p>It is not possible to add sections to the shop or product content areas, you can however add sections to the header/morefoot/footer areas and hide them by default then enable them on the product archive special meta tab.</p>';	
 	}
 
 	
@@ -65,11 +63,16 @@ class PageLinesJigoShop {
 	 *	Remove products from the template setup area, we cant control them so remove them.
 	 *  Individual products have meta settings, product archive is handled in special meta.
 	 */	
-	function jigo_templates( $public_post_type, $dragdrop ) {
+	function jigo_templates( $bool, $public_post_type, $area ) {
 		
-		if ( 'product' == $public_post_type )
-			return false;
-		return true;
+		if ( 'product' === $public_post_type )
+			$bool = false;
+		elseif( 'product_variation' === $public_post_type )
+			$bool = false;
+		else
+			$bool =  $bool;
+
+		return $bool;
 	}
 	
 	
@@ -128,14 +131,7 @@ class PageLinesJigoShop {
 		wp_enqueue_style( 'pl-jigoshop' );			
 	}
 
-	/**
-	 *	Include the LESS css file
-	 */	
-	function jigoshop_less( $less ) {
-		
-		$less .= pl_file_get_contents( sprintf( '%s/color.less', $this->base_dir ) );		
-		return $less;
-	}
+
 
 
 	/**
@@ -235,6 +231,15 @@ class PageLinesJigoShop {
 			return false;
 			
 		return true;
+	}
+	
+	/**
+	 *	Include the LESS css file
+	 */	
+	function jigoshop_less( $less ) {
+		
+		$less .= pl_file_get_contents( sprintf( '%s/color.less', $this->base_dir ) );		
+		return $less;
 	}
 	
 } // class end
