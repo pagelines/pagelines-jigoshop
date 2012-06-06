@@ -16,6 +16,9 @@ Documentation for using [Jigoshop](http://jigoshop.com/) can be [found through t
 
 == Changelog ==
 
+= 1.4.5 =
+* Fix broken image grid
+
 = 1.4 =
 * Fixed widget styling
 * Fixed template page with custom post types
