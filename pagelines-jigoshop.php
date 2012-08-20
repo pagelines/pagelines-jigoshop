@@ -7,7 +7,7 @@ Author URI: http://www.pagelines.com
 Demo: http://demo.pagelines.com/framework/shop
 Description: Refines and configures the popular Jigoshop plugin for seamless integration into PageLines. 
 PageLines: true
-Version: 1.4.6
+Version: 1.4.7
 Edition: pro
 */
 
@@ -41,7 +41,8 @@ class PageLinesJigoShop {
 
 
 	function admin_page() {
-
+		if ( ! function_exists( 'ploption' ) )
+			return;
 		pl_add_options_page( array( 
 			'name'	=> 'jigoshop',
 			'raw'	=> $this->instructions(),

@@ -16,6 +16,9 @@ Documentation for using [Jigoshop](http://jigoshop.com/) can be [found through t
 
 == Changelog ==
 
+= 1.4.7 =
+* Add extra check for Framework.
+
 = 1.4.6 =
 * Fix div issue for 2.2.3
 
